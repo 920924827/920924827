@@ -1,0 +1,32 @@
+
+		double  tall;
+		double  heavy;
+		double TiZhi;
+		
+		Scanner input = new Scanner(System.in);
+		System.out.print("请输入身高(米): ");
+		 tall = input.nextDouble();
+		System.out.println(String.format("您的身高为: %.2f (米)", tall));
+		
+		 System.out.print("请输入体重 (kg): ");
+		 heavy = input.nextDouble();
+		 System.out.println(String.format("您的体重为: %.2f (kg)", heavy));
+		 
+		 TiZhi = heavy / Math.pow(tall,2); //求身高的平方: Math.pow(tall,2)    求身高开方: Math.sqrt(double n);
+		 System.out.println(String.format("您的体脂为: %.2f ", TiZhi));
+		 
+		 if (TiZhi < 18.5) {
+			System.out.println("体重过低");
+		}else if(TiZhi >= 18.5 && TiZhi <25) {
+			System.out.println("正常");
+		}else if(TiZhi >= 25 && TiZhi < 30) {
+			System.out.println("肥胖前期");
+		}else if(TiZhi >= 30 && TiZhi < 35) {
+			System.out.println("Ⅰ 度肥胖");
+		}else if(TiZhi >= 35 && TiZhi < 40) {
+			System.out.println("Ⅱ 度肥胖");
+		}else {
+			System.out.println("Ⅲ 度肥胖");
+		}
+		 input.close();			
+	
